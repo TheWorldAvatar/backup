@@ -1,0 +1,4 @@
+services:
+  kopia:
+    image: ghcr.io/theworldavatar/kopia:0.1.0-init-SNAPSHOT
+    build: .
