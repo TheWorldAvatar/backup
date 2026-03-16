@@ -13,8 +13,6 @@ RUN chmod 0644 /etc/cron.d/backup-cron \
     && crontab /etc/cron.d/backup-cron
 
 RUN touch /var/log/cron.log
+# Override the entrypoint from the base image, "-f" keeps cron in the foreground
+ENTRYPOINT ["cron", "-f"]
 
-# Reset the entrypoint from the base image
-ENTRYPOINT []
-
-CMD ["cron", "-f"]
