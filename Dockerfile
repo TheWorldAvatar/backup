@@ -1,4 +1,5 @@
-FROM kopia/kopia:20260224.0.42919
+ARG KOPIA_VERSION="$KOPIA_VERSION"
+FROM kopia/kopia:$KOPIA_VERSION
 
 RUN mkdir -p ~/.ssh
 
