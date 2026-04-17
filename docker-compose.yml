@@ -4,4 +4,4 @@ services:
       context: .
       args:
         - KOPIA_VERSION=${KOPIA_VERSION:-20260224.0.42919}
-    image: ghcr.io/theworldavatar/kopia:${KOPIA_VERSION:-20260224.0.42919}
+    image: ghcr.io/theworldavatar/kopia:${KOPIA_VERSION:-20260224.0.42919}-1
