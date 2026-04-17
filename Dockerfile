@@ -6,7 +6,7 @@ RUN mkdir -p ~/.ssh
 RUN apt-get update && apt-get install -y cron keychain && rm -rf /var/lib/apt/lists/*
 
 RUN touch /usr/local/bin/kopia-backup.sh \
-    && chmod +x /usr/local/bin/kopia-backup.sh
+    && chmod 0700 /usr/local/bin/kopia-backup.sh
 
 RUN echo "0 0 * * * /usr/local/bin/kopia-backup.sh >> /var/log/cron.log 2>&1" | crontab -
 
